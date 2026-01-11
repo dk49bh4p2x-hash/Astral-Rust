@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Astral Rust — Донат</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a1f2b, #07080c);
+    color: #fff;
+}
+header {
+    padding: 30px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    color: #7cf5ff;
+    letter-spacing: 2px;
+}
+.lang {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.lang button {
+    margin: 0 5px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+.block {
+    background: rgba(20, 25, 40, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(124,245,255,0.1);
+}
+h2 {
+    color: #7cf5ff;
+}
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #101522;
+    color: #fff;
+    font-size: 16px;
+}
+.pack {
+    margin-top: 15px;
+}
+.pack-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #00ffe1;
+}
+.pack-price {
+    font-weight: bold;
+    color: #7cf5ff;
+}
+.item-list {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.card {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #00ffe1;
+    text-align: center;
+    margin: 15px 0;
+}
+.warning {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    color: #aaa;
+    margin: 40px 0;
+    font-size: 14px;
+}
+</style>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll("[data-ua]").forEach(el => {
+        el.innerHTML = el.getAttribute("data-" + lang);
+    });
+}
+</script>
+</head>
+
+<body>
+
+<header>
+    ASTRAL RUST SERVER
+</header>
+
+<div class="lang">
+    <button onclick="setLang('ua')">UA</button>
+    <button onclick="setLang('ru')">RU</button>
+</div>
+
+<div class="container">
+
+    <!-- Донат загальна -->
+    <div class="block">
+        <h2 data-ua="💎 Донат підтримка сервера"
+            data-ru="💎 Донат поддержка сервера"></h2>
+        <p data-ua="Підтримай розвиток сервера <b>Astral Rust</b> та отримай ігрові привілеї. Донат купляється <b>на 1 місяць</b>."
+           data-ru="Поддержи развитие сервера <b>Astral Rust</b> и получи игровые привилегии. Донат покупается <b>на 1 месяц</b>."></p>
+    </div>
+
+    <!-- Нік -->
+    <div class="block">
+        <h2 data-ua="🎮 Ваш нік у грі"
+            data-ru="🎮 Ваш ник в игре"></h2>
+        <p data-ua="Введіть нік, <b>на який має бути виданий донат</b>:"
+           data-ru="Введите ник, <b>на который будет выдан донат</b>:"></p>
+        <input type="text" placeholder="Nick in Rust">
+    </div>
+
+    <!-- Пакети -->
+    <div class="block">
+        <h2 data-ua="📦 Пакети донату"
+            data-ru="📦 Донат-пакеты"></h2>
+
+        <!-- VIP -->
+        <div class="pack">
+            <div class="pack-name">VIP</div>
+            <div class="pack-price">35 грн</div>
+            <ul class="item-list">
+                <li>Стартовий кіт (1 раз за вайп): кам’яна кирка, кам’яна сокира, 3000 дерева, 2000 каменю, 300 металевих фрагментів, Revolver, Pistol Ammo ×40, Scrap ×150, Gears ×3, Metal Pipe ×2, Rope ×2, Sewing Kit ×2, Tech Trash ×1, Бинт ×15, Медичний шприц ×3, Low Grade Fuel ×50</li>
+                <li>Щоденний кіт /vip: Scrap ×50, Metal Pipe ×1, Gears ×1, Rope ×1, Бинт ×5, Low Grade Fuel ×30</li>
+            </ul>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="pack">
+            <div class="pack-name">Premium</div>
+            <div class="pack-price">70 грн</div>
+            <ul class="item-list">
+                <li>Стартовий кіт (1 раз за вайп): металева кирка, металева сокира, 6000 дерева, 5000 каменю, 1500 металевих фрагментів, Берданка, Thompson, 5.56 Ammo ×40, Pistol Ammo ×80, Scrap ×350, Gears ×6, Metal Pipe ×5, Rope ×5, Sewing Kit ×5, Road Signs ×2, SMG Body ×1, Rifle Body ×1, Tech Trash ×3, Бинт ×20, Медичний шприц ×10, Low Grade Fuel ×120</li>
+                <li>Щоденний кіт /premium: Scrap ×120, Metal Pipe ×2, Gears ×2, Sewing Kit ×2, Rope ×2, Tech Trash ×1, Бинт ×10, Медичний шприц ×5</li>
+            </ul>
+        </div>
+
+        <!-- ELITE -->
+        <div class="pack">
+            <div class="pack-name">Elite</div>
+            <div class="pack-price">110 грн</div>
+            <ul class="item-list">
+                <li>Стартовий кіт (1 раз на 4 дні): Jackhammer, Chainsaw, 12 000 дерева, 10 000 каменю, 5000 металевих фрагментів, HQM ×1000, AK, Bolt-Action Rifle, Thompson, 5.56 Ammo ×200, Pistol Ammo ×150, Explosive Ammo ×15, Scrap ×800, Gears ×12, Metal Pipe ×10, Rope ×10, Sewing Kit ×10, Road Signs ×5, SMG Body ×3, Rifle Body ×3, Tech Trash ×8, Targeting Computer ×1, CCTV Camera ×2, RF Broadcaster ×1, RF Receiver ×1, Бинт ×30, Медичний шприц ×20, Low Grade Fuel ×250</li>
+                <li>Щоденний кіт /elite: Scrap ×250, Tech Trash ×3, SMG Body ×1, Rifle Body ×1, Gears ×3, Metal Pipe ×3, Sewing Kit ×3, CCTV Camera ×1, Бинт ×10, Медичний шприц ×10</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Оплата -->
+    <div class="block">
+        <h2 data-ua="💳 Оплата"
+            data-ru="💳 Оплата"></h2>
+        <p data-ua="Переказуйте кошти на карту:"
+           data-ru="Переводите средства на карту:"></p>
+        <div class="card">5168 7451 4109 0669</div>
+        <p class="warning"
+           data-ua="⚠️ ОБОВʼЯЗКОВО! У коментарі до переказу напишіть <u>свій нік у грі</u>, інакше донат не буде видано."
+           data-ru="⚠️ ОБЯЗАТЕЛЬНО! В комментарии к переводу укажите <u>свой ник в игре</u>, иначе донат не будет выдан."></p>
+    </div>
+
+    <!-- Важливо -->
+    <div class="block">
+        <h2 data-ua="📌 Важливо"
+            data-ru="📌 Важно"></h2>
+        <ul>
+            <li data-ua="Донат видається після підтвердження оплати"
+                data-ru="Донат выдается после подтверждения оплаты"></li>
+            <li data-ua="Усі питання — через адміністрацію сервера"
+                data-ru="Все вопросы — через администрацию сервера"></li>
+            <li data-ua="Дякуємо за підтримку ❤️"
+                data-ru="Спасибо за поддержку ❤️"></li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    © Astral Rust Server | Time for changes
+</footer>
+
+<script>
+setLang('ua'); // за замовчуванням українська
+</script>
+
+</body>
+</html>
